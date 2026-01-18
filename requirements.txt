@@ -1,0 +1,42 @@
+# python==3.9
+
+# Web
+Flask>=2.2,<3.0
+Werkzeug>=2.2,<2.3
+Flask-Cors>=3.0,<4.0
+
+# HuggingFace
+huggingface-hub>=0.12,<1.0
+transformers>=4.32,<5.0
+tokenizers>=0.13,<0.20
+accelerate==1.10.1
+
+# NLP
+keybert>=0.7,<1.0
+gensim>=4.3,<5.0
+einops==0.8.1
+
+# Torch(GPU version needed install by hand)
+# pip install torch torchvision torchaudio \
+#  --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0,<2.3
+torchvision>=0.15,<0.18
+
+# Data
+numpy>=1.23,<2.0
+scipy>=1.11,<1.13
+pandas>=1.4,<2.2
+matplotlib>=3.5,<3.9
+
+# Vision
+Pillow>=9.3,<11.0
+opencv-python>=4.6,<4.10
+scikit_image==0.24.0
+
+# Diffusion
+diffusers>=0.25,<0.31
+omegaconf>=2.3,<3.0
+
+# Others
+tqdm>=4.64
+wordcloud>=1.9

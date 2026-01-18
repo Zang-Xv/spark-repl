@@ -1,0 +1,18 @@
+  - 建议将基础模型文件转存至与HAI实例同地域的COS桶中，再在HAI实例中拉取COS文件，速度最快
+- SD插件存储目录是：/root/stable-diffusion-webui/extensions
+  - 若插件下载异常，可先进入此目录，通过git clone的方式将插件克隆到此目录中
+- 国内地域HAI实例可能存在网络不稳定情况，推荐启用“学术加速”；国外地域HAI实例下载模型、插件速度更快
+### 快捷指令
+- 下列格子涵盖重启webui、查询webui运行log等指令，请按需单独执行每个格子的代码
+%%bash
+
+## 重启webui（当webui连接出错时执行）
+ps -ef | grep -i 'python3 -u launch.py' | grep -v 'grep' | awk '{print $2}' | xargs kill -9
+cd /root/stable-diffusion-webui
+python3 -u launch.py --skip-prepare-environment --xformers --listen --enable-insecure-extension-access --port=6889 >> /var/log/sd_service.log 2>&1 &
+proc_num=`ps -ef|grep "python3 -u launch.py"|grep -v "grep"|wc -l`
+if [[ $proc_num -ge 1 ]]; then
+    echo "success"
+else
+    echo "failed"
+fi

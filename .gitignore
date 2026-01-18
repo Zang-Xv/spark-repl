@@ -1,0 +1,41 @@
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+
+# ===== 编辑器 / IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== 日志 =====
+*.log
+logs/
+
+# ===== 环境 / 密钥 =====
+.env
+*.key
+
+# ===== 构建产物 =====
+dist/
+build/
+out/
+
+# ===== 依赖 =====
+node_modules/
+vendor/
+
+# ===== Python =====
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== 临时文件 =====
+tmp/
+temp/
+
+# ===== 大文件/模型 =====
+mask/bg_removal.pth
+theme_extract/model.bin
+theme_extract/model.txt
