@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: createVitePlugins(),
   // vite 相关配置
   server: {
-    port: 80,
+    port: 8080,
     host: true,
     open: true
   },

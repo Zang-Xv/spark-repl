@@ -15,7 +15,7 @@
     <div class="content" style="display: flex; flex-direction: row; position: relative;">
       <!-- <div class="eval_info"> -->
         <div class="img_container" style="position: relative;">
-          <img id="myImage" :src=imgSrc>
+          <img id="myImage" :src="imgSrc" alt="estimation image" />
         </div>
         <button class="value" v-if="show" style="position: absolute; top: 0; right: 100;">{{ value_estimation }}</button>
       <!-- </div> -->
@@ -83,7 +83,7 @@ let isEvaluateBar = ref(false);
 let isEvaluateLine = ref(false);
 let isEvaluatePie = ref(false);
 let isEvaluateScatter = ref(false);
-let imgSrc = ref('/src/assets/generation/estimation/default.png')
+let imgSrc = ref('/src/assets/generation/estimation/default.jpg')
 const value_estimation = ref(94.5);
 let show = ref(false)
 let count = ref(0)

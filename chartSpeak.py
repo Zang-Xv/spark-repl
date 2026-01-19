@@ -300,7 +300,7 @@ def evaluate_element():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=88, debug=True)
+    app.run(host='127.0.0.1', port=8888, debug=True)
 
     # if method_to_generate == "FE" and location == "UNC":
     #     for i in range(num_to_generate):
