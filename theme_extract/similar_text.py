@@ -46,7 +46,7 @@ def extract_kw_similar(title):
     # print(keywords_list)
 
     # load model
-    emb_model, embeddings, key_list, key_index_dict = load_embeddings('C:/Users/user/A-project/speak/theme_extract/model.bin')
+    emb_model, embeddings, key_list, key_index_dict = load_embeddings('/home/ubuntu/ChartSpark/theme_extract/model.bin')
     # find all words containing "xx"
     theme = keywords_list[0]
     theme_and_text = {}
@@ -67,7 +67,7 @@ def extract_kw_similar(title):
 # title = "Date of cherry blossom in High Park"
 # my_dict = extract_kw_similar(title)
 # # print(my_dict)
-# wordcloud_gen = WordCloudGenerator(font_path='C:/Users/user/A-project/speak/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
+# wordcloud_gen = WordCloudGenerator(font_path='/home/ubuntu/ChartSpark/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
 #                                     background_color='#F5F5F5', colormap="binary",  
 #                                     prefer_horizontal=1, 
 #                                     max_font_size=45, min_font_size=12, 

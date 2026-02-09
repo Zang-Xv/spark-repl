@@ -33,7 +33,7 @@ from mask.bg_removal import bg_removal
 def text2img_element(pipe_text2img, prompt):
     image_text2img = pipe_text2img(prompt=prompt, width=512, height=512, guidance_scale=7.5).images[0]
     num = random.randint(0, 100)
-    image_text2img.save("C:/Users/user/A-project/speak/generation/output/"+prompt+str(num)+".png")
+    image_text2img.save("/home/ubuntu/ChartSpark/generation/output/"+prompt+str(num)+".png")
     return image_text2img
 
 def extract_element(image_text2img):

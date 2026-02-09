@@ -31,7 +31,20 @@ __pycache__/
 .venv/
 venv/
 
-# ===== 临时文件 =====
+# ===== 临时/输出文件 =====
+output/preview/*
+output/mask/bar/.json
+output/mask/line/.json
+output/mask/pie/.json
+output/mask/bar/.png
+output/mask/line/.png
+output/mask/pie/.png
+output/mask/bar/background/*
+output/mask/bar/foreground/*
+output/mask/line/background/*
+output/mask/line/foreground/*
+output/mask/pie/background/*
+output/mask/pie/foreground/*
 tmp/
 temp/
 

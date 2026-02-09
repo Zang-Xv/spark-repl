@@ -34,16 +34,16 @@ def table2img_bar(x, y, aspect_ratio, title, y_limit=None, bar_width=0.8):
     ax.spines['left'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     fig.savefig('output/preview/bar_preview.png', dpi=fig.dpi)
-    fig.savefig('C:/Users/user/A-project/speak/frontend/src/assets/preview/bar_preview.png', dpi=fig.dpi)
+    fig.savefig('/home/ubuntu/ChartSpark/frontend/src/assets/preview/bar_preview.png', dpi=fig.dpi)
     ### save SVG
     # mpl.use("svg")
     # new_rc_params = {'text.usetex': False,
     # "svg.fonttype": 'none'
     # }
     # mpl.rcParams.update(new_rc_params)
-    fig.savefig("C:/Users/user/A-project/speak/frontend/src/assets/preview/plot.svg", transparent = True, format="svg", dpi=fig.dpi)
+    fig.savefig("/home/ubuntu/ChartSpark/frontend/src/assets/preview/plot.svg", transparent = True, format="svg", dpi=fig.dpi)
     # mpl.use("module://matplotlib_inline.backend_inline")
-    return 'C:/Users/user/A-project/speak/frontend/src/assets/preview/bar_preview.png'
+    return '/home/ubuntu/ChartSpark/frontend/src/assets/preview/bar_preview.png'
 
 def img2mask_bar(x, y, aspect_ratio, y_limit=None, bar_width=0.8):
     mask_path_foreground = []

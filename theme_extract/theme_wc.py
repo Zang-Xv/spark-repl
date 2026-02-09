@@ -56,7 +56,7 @@ class WordCloudGenerator:
         print("-----------------------")
         return "frontend/src/assets/wordcloud/wc.png",
 # d = {'Aghtrj': 20, 'Bsddfdh': 10, 'Cfergrr': 14, 'Jwet': 18}
-# wordcloud_gen = WordCloudGenerator(font_path='C:/Users/user/A-project/speak/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
+# wordcloud_gen = WordCloudGenerator(font_path='/home/ubuntu/ChartSpark/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
 #                                    background_color='#F5F5F5', colormap="binary",  
 #                                    prefer_horizontal=1, 
 #                                    max_font_size=45, min_font_size=12, 

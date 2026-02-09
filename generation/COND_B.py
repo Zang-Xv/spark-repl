@@ -11,7 +11,7 @@ import json
 from scipy.optimize import minimize
 # from daam import trace, set_seed
 current_path = os.getcwd()
-print(current_path)
+print(current_path+ " print by COND_B.py")
 module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -23,8 +23,8 @@ from scipy.spatial import distance
 ## ==================== Load model ====================
 # Paths and prompt
 # device = "cuda"
-# config="C:/Users/user/A-project/speak/generation/config/v1-inference.yaml"
-# ckpt = "C:/Users/user/A-project/speak/generation/model/sd-v1-4-full-ema.ckpt"
+# config="/home/ubuntu/ChartSpark/generation/config/v1-inference.yaml"
+# ckpt = "/home/ubuntu/ChartSpark/generation/model/sd-v1-4-full-ema.ckpt"
 
 # Generation parameters
 # scale=3

@@ -6,7 +6,7 @@ import numpy as np
 import torch
 import random
 current_path = os.getcwd()
-print(current_path)
+print(current_path+ " print by UNC.py")
 module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)

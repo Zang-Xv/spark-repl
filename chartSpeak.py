@@ -17,7 +17,7 @@ import base64
 import random
 warnings.filterwarnings("ignore")
 current_path = os.getcwd()
-print(current_path)
+print(current_path + " print by chartSpeak.py")
 module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -131,7 +131,7 @@ def setting_preview_wc():
         img_path1 = table2img_scatter(x, y, z, title, y_limit, aspect_ratio[ratio_id])
         mask_path_foreground, mask_path_background = img2mask_scatter(x, y, z, y_limit, aspect_ratio[ratio_id])
     d = extract_kw_similar(title)
-    wordcloud_gen = WordCloudGenerator(font_path='C:/Users/user/A-project/speak/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
+    wordcloud_gen = WordCloudGenerator(font_path='/home/ubuntu/ChartSpark/frontend/src/assets/fonts/TiltNeon-Regular.ttf',  
                                     background_color='#F5F5F5', colormap="binary",  
                                     prefer_horizontal=1, 
                                     max_font_size=45, min_font_size=12, 
@@ -300,7 +300,7 @@ def evaluate_element():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8888, debug=True)
+    app.run(host='127.0.0.1', port=8888, debug=True, use_reloader=False)
 
     # if method_to_generate == "FE" and location == "UNC":
     #     for i in range(num_to_generate):

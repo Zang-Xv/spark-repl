@@ -61,8 +61,8 @@ def table2img_line(x, y, aspect_ratio, title, y_limit, four_corners):
     ax.spines['bottom'].set_visible(False)
 
     fig.savefig('output/preview/line_preview.png', dpi=fig.dpi)
-    fig.savefig('C:/Users/user/A-project/speak/frontend/src/assets/preview/line_preview.png', dpi=fig.dpi)
-    fig.savefig("C:/Users/user/A-project/speak/frontend/src/assets/preview/plot.svg", transparent = True, format="svg", dpi=fig.dpi)
+    fig.savefig('/home/ubuntu/ChartSpark/frontend/src/assets/preview/line_preview.png', dpi=fig.dpi)
+    fig.savefig("/home/ubuntu/ChartSpark/frontend/src/assets/preview/plot.svg", transparent = True, format="svg", dpi=fig.dpi)
     return 'output/preview/line_preview.png', xy_pix, (width, height), xy_corners_pixels
 
 
@@ -78,11 +78,11 @@ def img2mask_line(pos_pix, fig_size, xy_corners_pix, y_limit):
     for i in range(len(pos_pix)-1):
         draw.line([tuple(pos_pix[i]), tuple(pos_pix[i+1])], fill ="white", width = 10)    
     bg.save('output/mask/line/foreground/mask1.png')
-    bg.save('C:/Users/user/A-project/speak/frontend/src/assets/mask/line/foreground/mask1.png')
+    bg.save('/home/ubuntu/ChartSpark/frontend/src/assets/mask/line/foreground/mask1.png')
     mask_path_foreground.append("src/assets/mask/line/foreground/mask1.png")
     bg_reverse = ImageOps.invert(bg)
     bg_reverse.save('output/mask/line/background/mask2.png')
-    bg_reverse.save('C:/Users/user/A-project/speak/frontend/src/assets/mask/line/background/mask2.png')
+    bg_reverse.save('/home/ubuntu/ChartSpark/frontend/src/assets/mask/line/background/mask2.png')
     mask_path_background.append("src/assets/mask/line/background/mask2.png")
 
     # create shape mask --1

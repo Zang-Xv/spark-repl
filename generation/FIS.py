@@ -22,7 +22,7 @@ import re
 import sys
 import cv2
 current_path = os.getcwd()
-print(current_path)
+print(current_path + " print by FIS.py")
 # sys.path.append(os.path.join(current_path, 'mask'))
 
 module_path = os.path.abspath(os.path.join('..'))
@@ -34,7 +34,7 @@ def text2img_func(pipe_text2img, prompt, figure_size):
     print(figure_size)
     image_text2img = pipe_text2img(prompt=prompt, width=figure_size[0], height=figure_size[1], guidance_scale=7.5).images[0]
     num = random.randint(0, 100)
-    image_text2img.save("C:/Users/user/A-project/speak/generation/output/"+prompt+str(num)+".png")
+    image_text2img.save("/home/ubuntu/ChartSpark/generation/output/"+prompt+str(num)+".png")
     return image_text2img
 
 def image_grid(imgs, rows, cols):

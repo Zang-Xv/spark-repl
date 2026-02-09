@@ -5,7 +5,7 @@ import os
 
 
 def clear_folder():
-    main_folder = "C:/Users/user/A-project/speak/"
+    main_folder = "/home/ubuntu/ChartSpark/"
     folder_path = ["output/mask/bar/background", "output/mask/bar/foreground",
                   "output/mask/line/background", "output/mask/line/foreground",
                   "output/mask/pie/background", "output/mask/pie/foreground",
@@ -14,17 +14,23 @@ def clear_folder():
                   "frontend/src/assets/mask/pie/background", "frontend/src/assets/mask/pie/foreground",
                   "frontend/src/assets/evaluation"]  # 文件夹路径
 
+    for rel_path in folder_path:
+        dir_path = os.path.join(main_folder, rel_path)
+
     # 遍历文件夹中的所有文件并删除
     for i in range(len(folder_path)):
-        for filename in os.listdir(main_folder+folder_path[i]):
-            print(filename)
-            file_path = os.path.join(main_folder, folder_path[i], filename)
-            print(file_path)
-            try:
-                if os.path.isfile(file_path):
-                    os.unlink(file_path)
-            except Exception as e:
-                print(f"Failed to delete {file_path}. Reason: {e}")
+        for path in dir_path:
+            if not os.path.isdir(path):
+                continue
+            for filename in os.listdir(path):
+                print(filename)
+                file_path = os.path.join(path, filename)
+                print(file_path)
+                try:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                except Exception as e:
+                    print(f"Failed to delete {file_path}. Reason: {e}")
 
 
 def image_grid(imgs, rows, cols):
